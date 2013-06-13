@@ -12,19 +12,12 @@ namespace ApotekMedicalCenter.Controllers
     {
         BasisData db = new BasisData();
         Pengguna pengguna = new Pengguna();
+        
         public bool Register(Dictionary<string, string> registerData)
         {
             if (pengguna.IsExist(registerData["username"]))
-            {
-                AkunModel penggunaBaru = new AkunModel
-                {
-                    Username = registerData["username"],
-                    Password = registerData["password"],
-                    HakAkses = Convert.ToInt32(registerData["hak_akses"])
-                };
-
-                pengguna.Tambah(penggunaBaru);
-
+            {   
+                pengguna.Tambah(registerData);
                 return true;
             }
             

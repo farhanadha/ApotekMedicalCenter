@@ -59,16 +59,35 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Controllers\AkunController.cs" />
-    <Compile Include="Models\AkunModel.cs" />
+    <Compile Include="Models\Akun.cs" />
+    <Compile Include="Models\Apoteker.cs" />
     <Compile Include="Models\BasisData.cs" />
+    <Compile Include="Models\Dokter.cs" />
+    <Compile Include="Models\Obat.cs" />
     <Compile Include="Models\Pengguna.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\PenyediaObat.cs" />
+    <Compile Include="Models\Resep.cs" />
+    <Compile Include="Views\BuatResep.xaml.cs">
+      <DependentUpon>BuatResep.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pengadaan.xaml.cs">
+      <DependentUpon>Pengadaan.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\BuatResep.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pengadaan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Register.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
