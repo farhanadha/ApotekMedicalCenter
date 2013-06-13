@@ -13,9 +13,6 @@ namespace ApotekMedicalCenter.Models
         public int IdPengadaanObat { set; get; }
 
         [Required]
-        public int IdPengerjaanObat { set; get; }
-
-        [Required]
         public int IdApoteker { set; get; }
 
         [Required]

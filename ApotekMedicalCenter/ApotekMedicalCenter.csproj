@@ -64,12 +64,16 @@
     <Compile Include="Models\BasisData.cs" />
     <Compile Include="Models\Dokter.cs" />
     <Compile Include="Models\Obat.cs" />
+    <Compile Include="Models\ObatDikerjakan.cs" />
+    <Compile Include="Models\PengadaanObat.cs" />
+    <Compile Include="Models\ObatDiadakan.cs" />
+    <Compile Include="Models\PengerjaanObat.cs" />
     <Compile Include="Models\Pengguna.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\PenyediaObat.cs" />
+    <Compile Include="Models\Penyedia.cs" />
     <Compile Include="Models\Resep.cs" />
     <Compile Include="Views\BuatResep.xaml.cs">
       <DependentUpon>BuatResep.xaml</DependentUpon>
