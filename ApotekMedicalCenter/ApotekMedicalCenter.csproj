@@ -87,6 +87,9 @@
     <Compile Include="Views\MengerjakanResep.xaml.cs">
       <DependentUpon>MengerjakanResep.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\BuatResep.xaml.cs">
+      <DependentUpon>BuatResep.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
@@ -106,6 +109,10 @@
       <DependentUpon>VerifikasiResep.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\MengerjakanResep.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BuatResep.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
