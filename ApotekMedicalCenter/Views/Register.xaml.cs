@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ApotekMedicalCenter.Controllers;
+using ApotekMedicalCenter.Models;
 
 namespace ApotekMedicalCenter.Views
 {
@@ -28,6 +29,11 @@ namespace ApotekMedicalCenter.Views
         public Register()
         {
             InitializeComponent();
+
+            BasisData db = new BasisData();
+            List<Akun> listAkun = (from akun in db.Akun select akun).ToList();
+
+            dataGridAkun.ItemsSource = listAkun;
         }
 
         /// <summary>
@@ -77,6 +83,7 @@ namespace ApotekMedicalCenter.Views
 
             Dictionary<string, string> registerData = new Dictionary<string,string>();
 
+            registerData.Add("nama_pengguna", texBoxNamaPengguna.Text);
             registerData.Add("username", textBoxUserName.Text);
             registerData.Add("password", passwordBoxPassword.Password);
             registerData.Add("hak_akses", Convert.ToString(comboBoxHakAkses.SelectedIndex + 1));
@@ -93,6 +100,7 @@ namespace ApotekMedicalCenter.Views
                 textBlockMessage.Text = "Registrasi gagal! Username telah digunakan.\n";
             }
 
+            texBoxNamaPengguna.Text = "";
             textBoxUserName.Text = "";
             passwordBoxPassword.Password = "";
             passwordBoxConfirmPassword.Password = "";

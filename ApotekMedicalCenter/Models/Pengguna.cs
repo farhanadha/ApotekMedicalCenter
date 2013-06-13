@@ -10,9 +10,52 @@ namespace ApotekMedicalCenter.Models
     {
         BasisData db = new BasisData();
 
-        public void Tambah(AkunModel data)
+        public void Tambah(Dictionary<string, string> registerData)
         {
-            db.Akun.Add(data);
+            Akun penggunaBaru = new Akun
+            {
+                Username = registerData["username"],
+                Password = registerData["password"],
+                HakAkses = Convert.ToInt32(registerData["hak_akses"])
+            };
+
+            db.Akun.Add(penggunaBaru);
+            db.SaveChanges();
+
+            int idAkun = penggunaBaru.IdAkun;
+
+            switch (penggunaBaru.HakAkses)
+            {
+                case 1:
+                    TambahApoteker(registerData["nama_pengguna"], idAkun);
+                    break;
+                case 2:
+                    TambahDokter(registerData["nama_pengguna"], idAkun);
+                    break;
+            };
+        }
+
+        private void TambahApoteker(string namaPengguna, int idAkun)
+        {
+            Apoteker apotekerBaru = new Apoteker
+            {
+                NamaApoteker = namaPengguna,
+                IdAkun = idAkun
+            };
+
+            db.Apoteker.Add(apotekerBaru);
+            db.SaveChanges();
+        }
+
+        public void TambahDokter(string namaPengguna, int idAkun)
+        {
+            Dokter dokterBaru = new Dokter
+            {
+                NamaDokter = namaPengguna,
+                IdAkun = idAkun
+            };
+
+            db.Dokter.Add(dokterBaru);
             db.SaveChanges();
         }
 

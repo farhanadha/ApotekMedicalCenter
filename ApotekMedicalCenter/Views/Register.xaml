@@ -18,24 +18,28 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         
-        <Label x:Name="labelUserName" Content="Username" Grid.Row="0" Grid.Column="0" />
-        <TextBox x:Name="textBoxUserName" Grid.Row="0" Grid.Column="1" />
+        <Label x:Name="labelNamaPengguna" Content="Nama Lengkap" Grid.Row="0" Grid.Column="0" />
+        <TextBox x:Name="texBoxNamaPengguna" Grid.Row="0" Grid.Column="1" />
         
-        <Label x:Name="labelPassword" Content="Password" Grid.Row="1" Grid.Column="0" />
-        <PasswordBox x:Name="passwordBoxPassword" Grid.Row="1" Grid.Column="1" />
+        <Label x:Name="labelUserName" Content="Username" Grid.Row="1" Grid.Column="0" />
+        <TextBox x:Name="textBoxUserName" Grid.Row="1" Grid.Column="1" />
         
-        <Label x:Name="labelConfirmPassword" Content="Ketik Ulang Password" Grid.Row="2" Grid.Column="0" />
-        <PasswordBox x:Name="passwordBoxConfirmPassword" Grid.Row="2" Grid.Column="1" />
+        <Label x:Name="labelPassword" Content="Password" Grid.Row="2" Grid.Column="0" />
+        <PasswordBox x:Name="passwordBoxPassword" Grid.Row="2" Grid.Column="1" />
         
-        <Label x:Name="labelHakAkses" Content="Hak Akses" Grid.Row="3" Grid.Column="0" />
-        <ComboBox x:Name="comboBoxHakAkses" Grid.Row="3" Grid.Column="1" Padding="0" >
-            <ComboBoxItem Content="Pasien" />
+        <Label x:Name="labelConfirmPassword" Content="Ketik Ulang Password" Grid.Row="3" Grid.Column="0" />
+        <PasswordBox x:Name="passwordBoxConfirmPassword" Grid.Row="3" Grid.Column="1" />
+        
+        <Label x:Name="labelHakAkses" Content="Hak Akses" Grid.Row="4" Grid.Column="0" />
+        <ComboBox x:Name="comboBoxHakAkses" Grid.Row="4" Grid.Column="1" Padding="0" >
+            <ComboBoxItem Content="Apoteker" />
             <ComboBoxItem Content="Dokter" />
             <ComboBoxItem Content="Administrator" />
         </ComboBox>
         
-        <Button x:Name="buttonRegister" Click="SubmitForm" Content="Register" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0" FontSize="14" />
+        <Button x:Name="buttonRegister" Click="SubmitForm" Content="Register" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0" FontSize="14" />
         
-        <TextBlock x:Name="textBlockMessage" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Padding="5" Foreground="Red" TextWrapping="Wrap" />
+        <TextBlock x:Name="textBlockMessage" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Padding="5" Foreground="Red" TextWrapping="Wrap" />
+        <DataGrid x:Name="dataGridAkun" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2" />
     </Grid>
 </Window>

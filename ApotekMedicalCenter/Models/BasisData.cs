@@ -9,6 +9,10 @@ namespace ApotekMedicalCenter.Models
 {
     public class BasisData : DbContext
     {
-        public DbSet<AkunModel> Akun { set; get; }
+        public DbSet<Akun> Akun { set; get; }
+
+        public DbSet<Apoteker> Apoteker { set; get; }
+
+        public DbSet<Dokter> Dokter { set; get; }
     }
 }
