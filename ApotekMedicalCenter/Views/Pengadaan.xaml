@@ -1,0 +1,121 @@
+﻿<Window x:Class="ApotekMedicalCenter.Views.Pengadaan"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Form Pengadaan" Height="400" Width="600">
+    <Grid x:Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition Width="0.5*" />
+        </Grid.ColumnDefinitions>
+
+        <Label 
+            Content="Tanggal Pengadaan" 
+            x:Name="labelTanggalPengadaan" 
+            Grid.Row="0" 
+            Grid.Column="0" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            MinWidth="100" 
+            />
+        <DatePicker 
+            x:Name="datePickerTanggalPengadaan" 
+            Grid.Row="0" 
+            Grid.Column="1" 
+            />
+
+        <Label 
+            Content="Nama Obat" 
+            x:Name="labelNamaObat" 
+            Grid.Row="1" 
+            Grid.Column="0" 
+            />
+        <TextBox 
+            x:Name="textBoxNamaObat" 
+            Grid.Row="1" 
+            Grid.Column="1" 
+            />
+        <Button
+            Content="Cari ID Obat"
+            x:Name="buttonCariIdObat"
+            Grid.Row="1"
+            Grid.Column="2"
+            />
+
+        <Label 
+            Content="ID Obat: "
+            x:Name="labelIdObat" 
+            Grid.Row="2" 
+            Grid.Column="1" HorizontalAlignment="Left"
+            />
+        <Label
+            Content="123"
+            x:Name="labelIdObatValue"
+            Grid.Row="2"
+            Grid.Column="1" HorizontalAlignment="Left" Margin="46,0,0,0"
+            />
+
+        <Label
+            Content="Banyak Obat"
+            x:Name="labelBanyakObat"
+            Grid.Row="3"
+            Grid.Column="0"
+            />
+        <TextBox
+            x:Name="textBoxBanyakObat"
+            Grid.Row="3"
+            Grid.Column="1"
+            />
+
+        <Label 
+            Content="Harga Obat"
+            x:Name="labelHargaObat"
+            Grid.Row="4"
+            Grid.Column="0"
+            />
+        <TextBox
+            x:Name="textBoxHargaObat"
+            Grid.Row="4"
+            Grid.Column="1"
+            />
+
+        <Label
+            Content="Nama Penyedia"
+            x:Name="labelNamaPenyedia"
+            Grid.Row="5"
+            Grid.Column="0"
+            />
+        <TextBox
+            x:Name="textBoxNamaPenyedia"
+            Grid.Row="5"
+            Grid.Column="1"
+            />
+
+        <Button
+            Content="Tambah Transaksi"
+            x:Name="buttonTambahTransaksi"
+            Grid.Row="6"
+            Grid.Column="0" 
+            HorizontalAlignment="Right" Margin="0,0,20,0"
+            />
+        <Button
+            Content="Simpan Semua"
+            x:Name="buttonSimpanSemua"
+            Grid.Row="6"
+            Grid.Column="1" 
+            HorizontalAlignment="Left" Margin="20,0,0,0"
+            />
+
+    </Grid>
+</Window>
